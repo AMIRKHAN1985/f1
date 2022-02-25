@@ -380,7 +380,7 @@ for i in range(1, 6):
 for i in range(0, 6): 
     print(arr[i], end = " ")`,
         imgSrc : "na.png",
-        correctAnswer: "B) "+"input_linked_list (Head to Tail): 7 -> 14 -> 20 -> 5 and input_stack (Top of Bottom): 5, 10",
+        correctAnswer: "D) "+"2 3 4 5 6 6",
         answer: [
             "A) "+"1 2 3 4 5 6",
             "B) "+"2 3 4 5 6 1",
@@ -454,7 +454,7 @@ for i in range(1, len(myList)):
         indexOfMax = i
 print(indexOfMax)`,
         imgSrc : "na.png",
-        correctAnswer: "B) "+"1",
+        correctAnswer: "A) "+"1",
         answer: [
             "A) "+"1",
             "B) "+"2",
