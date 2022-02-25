@@ -268,247 +268,192 @@ defaultInterval()
 var questions = [
     {
         numberQuestion: 1,
-        question: `Consider the input_linked_list:
-input_linked_list: 1->4->9->16
-What will be the value of the elements in the input_linked_list after the function fun() 
-is invoked by passing the head of the input_linked_list as an argument?`,
-        code:`def fun(head):
-        next_node = head.get_next()
-        while(head!=None and next_node != None):
-            head.set_data(head.get_data()+next_node.get_data())
-            head = head.get_next()
-            next_node = head.get_next()
-            if(next_node != None):
-                head.set_data(head.get_data()+next_node.get_data())
-     
-    Note: Order of displaying the elements is from head to tail.`,
+        question: `what is the output of following code?`,
+        code:`list1=[10,10,10,10]
+for x in list1:
+    list1.remove(x)
+print(list1)`,
         imgSrc : "q1.png",
-        correctAnswer: "C) "+"5 22 41 16",
+        correctAnswer: "C) "+"[10,10]",
         answer: [
-            "A) "+"5 13 25 16",
-            "B) "+"27 22 41 57",
-            "C) "+"5 22 41 16",
-            "D) "+"5 22 41 57"
+            "A) "+"[ ]",
+            "B) "+"[10,10,10,10]",
+            "C) "+"[10,10]",
+            "D) "+"Error"
         ]
     },
     {
         numberQuestion: 2,
-        question: `What is the output of following function when head node of following linked list is passed as input?
-        1->2->3->4->5`,
-        code:`def fun(head):
-        if(head==None):
-            return
-        if head.get_next().get_next()!= None:
-            print(head.get_data()," ", end='')
-            fun(head.get_next())
-        print(head.get_data()," ",end='')`,
+        question: `What will be the output of the following Python code?`,
+        code:`veggies = ['carrot', 'broccoli', 'potato', 'asparagus']
+veggies.insert(veggies.index('broccoli'), 'celery')
+print(veggies)`,
         imgSrc : "q2.png",
-        correctAnswer: "B) "+"1 2 3 4 3 2 1",
+        correctAnswer: "A) "+"[‘carrot’, ‘celery’, ‘broccoli’, ‘potato’, ‘asparagus’]",
         answer: [
-            "A) "+"1 2 3 4 3 2",
-            "B) "+"1 2 3 4 3 2 1",
-            "C) "+"1 2 3 4",
-            "D) "+"1 2 3 4 4 3 2"
+            "A) "+"[‘carrot’, ‘celery’, ‘broccoli’, ‘potato’, ‘asparagus’]",
+            "B) "+"[‘carrot’, ‘celery’, ‘potato’, ‘asparagus’]",
+            "C) "+"[‘carrot’, ‘broccoli’, ‘celery’, ‘potato’, ‘asparagus’]",
+            "D) "+"[‘celery’, ‘carrot’, ‘broccoli’, ‘potato’, ‘asparagus’]"
         ]
     },
     {
         numberQuestion: 3,
-        question: `What will be the order of elements in the linked list after line 19?`,
-        code:`def fun(prv,nxt,data):
-        if(nxt==None):
-            return
-        if(nxt.get_data()==data):
-            global sample
-            sample.add(data)
-            prv.set_next(nxt.get_next())
-            return
-        else:
-            fun(nxt,nxt.get_next(),data)
-     
-sample=LinkedList()
-sample.add(10)
-sample.add(20)
-sample.add(5)
-sample.add(55)
-sample.add(38)
-sample_head=sample.get_head()
-fun(sample_head, sample_head,5)`,
+        question: `What will be the output of the following Python code?`,
+        code:`m = [[x, x + 1, x + 2] for x in range(0, 3)]
+print(m)`,
         imgSrc : "q3.png",
-        correctAnswer: "A) "+"10 20 55 38 5",
+        correctAnswer: "B) "+"[[0, 1, 2], [1, 2, 3], [2, 3, 4]]",
         answer: [
-            "A) "+"10 20 55 38 5",
-            "B) "+"10 20 55 5 38",
-            "C) "+"10 20 55 38 38",
-            "D) "+"10 20 5 55 38"
+            "A) "+"[[1, 2, 3], [4, 5, 6], [7, 8, 9]]",
+            "B) "+"[[0, 1, 2], [1, 2, 3], [2, 3, 4]]",
+            "C) "+"[1, 2, 3, 4, 5, 6, 7, 8, 9]",
+            "D) "+"[0, 1, 2, 1, 2, 3, 2, 3, 4]"
         ]
     },
     {
         numberQuestion: 4,
-        question: `What does the below function using the Stack datastructure do?`,
-        code:`def fun(n):
-        stack = Stack(100)
-        while (n > 0):
-            stack.push(n%10)
-            n =int (n/10)
-        result=0
-        while (not stack.is_empty()):
-            result+=stack.pop()
-        return result`,
+        question: `What will be the output of the following Python code snippet?`,
+        code:`print('ab\ncd\nef'.splitlines())`,
         imgSrc : "q4.png",
-        correctAnswer: "A) "+"Takes a number 'n' as input and returns the sum of its digits",
+        correctAnswer: "A) "+"[‘ab’, ‘cd’, ‘ef’]",
         answer: [
-            "A) "+"Takes a number 'n' as input and returns the sum of its digits",
-            "B) "+"Takes a number 'n' as input and returns 0 if it is divisible by 10",
-            "C) "+"Takes a number 'n' as input and returns the sum of all its digits divisible by 10",
-            "D) "+"Takes a number 'n' as input and divides each digit of the number by 10 and returns the sum of result of each division operation"
+            "A) "+"[‘ab’, ‘cd’, ‘ef’]",
+            "B) "+"[‘ab\n’, ‘cd\n’, ‘ef\n’]",
+            "C) "+"[‘ab\n’, ‘cd\n’, ‘ef’]",
+            "D) "+"[‘ab’, ‘cd’, ‘ef\n’]"
         ]
     },
     {
         numberQuestion: 5,
-        question: `Consider Python code shown left:
-What will be the status of output_stack after execution of above code?
-Assumption: All the references to the necessary files are available
-Note: Consider that the elements of stack in the options are shown from top to bottom`,
-        code:`def process(input_stack);
-        output_stack=Stack(5)
-        count = 0
-        while(not input_stack.is_empty()):
-            temp=input_stack.pop()
-            for i in temp:
-                count += 1
-            output_stack.push(str(count)+temp)
-        return output_stack
-    
-input_stack=Stack(5)
-input_stack.push("India")
-input_stack.push("Australia")
-input_stack.push("England")
-input_stack.push("SouthAfrica")  
-process(input_stack).display()`,
+        question: `What will be the output of the following code snippet?`,
+        code:`data = [[[1, 2], [3, 4]], [[5, 6], [7, 8]]]
+def fun(m):
+    v = m[0][0]
+
+    for row in m:
+        for element in row:
+            if v < element: v = element
+
+    return v
+print(fun(data[0]))`,
         imgSrc : "na.png",
-        correctAnswer: "D) "+"32India-->27Australia-->18England-->11SouthAfrica",
+        correctAnswer: "D) "+"4",
         answer: [
-            "A) "+"11SouthAfrica-->18England-->27Australia-->32India",
-            "B) "+"5India-->9Australia-->7England-->11SouthAfrica",
-            "C) "+"11SouthAfrica-->7England-->9Australia-->5India",
-            "D) "+"32India-->27Australia-->18England-->11SouthAfrica"
+            "A) "+"1",
+            "B) "+"2",
+            "C) "+"3",
+            "D) "+"4"
         ]
     },
     {
         numberQuestion: 6,
-        question: `Number 14 needs to be searched using BINARY SEARCH in the following sorted list of numbers:
-
-1, 3, 7, 9, 14, 19, 45
-        
-How many comparisons will be required to conclude that the number 14 is found at 5th position?
-        
-Note: We have used integer division for finding the middle element and the index starts with 0 (zero)`,
-        code:``,
+        question: `What will be the output of the following code snippet?`,
+        code:`def f(i, values = []):
+    values.append(i)
+    print (values)
+    return values
+f(1)
+f(2)
+f(3)`,
         imgSrc : "na.png",
-        correctAnswer: "B) "+"3",
+        correctAnswer: "C) "+"[1] [1, 2] [1, 2, 3]",
         answer: [
-            "A) "+"2",
-            "B) "+"3",
-            "C) "+"4",
-            "D) "+"1"
+            "A) "+"[1] [2] [3]",
+            "B) "+"[1, 2, 3]",
+            "C) "+"[1] [1, 2] [1, 2, 3]",
+            "D) "+"1 2 3"
         ]
     },
     {
         numberQuestion: 7,
-        question: `Consider the following inputs:
-input_linked_list (Head to Tail): 1 -> 2 -> 5 -> 3
-input_stack (Top to Bottom): 4, 2, 5, 10
-What will be the content of Input_linked_list from head to tail and input_stack from top to bottom 
-after the execution of the function generate?
-Assumption: Stack and LinkedList classes, with the necessary methods, are available`,
-        code:`def generate (input_linked_list , input_stack):
-            temp= input_linked_list.get_head ( )
-            element=0
-            while(temp.get_next ( ) is not None):
-                temp.set_data (temp.get_data ( )+temp.get_next ( ). get_data ( )+element)
-                if temp.get_data ( ) %2 !=0:
-                    temp.set_data(temp.get_data ( ) +input_stack.pop ( ) )
-                    element=temp.get_data ( )
-                else:
-                    input_stack.push (element )
-                    element=temp.get_next ( ).get_data ( )
-                temp=temp.get_next ( )
-            temp.set_data(temp.get_data ( )+input_stack.pop ( ) `,
+        question: `What will be the output of the following code snippet?`,
+        code:`arr = [1, 2, 3, 4, 5, 6]
+for i in range(1, 6):
+    arr[i - 1] = arr[i]
+for i in range(0, 6): 
+    print(arr[i], end = " ")`,
         imgSrc : "na.png",
         correctAnswer: "B) "+"input_linked_list (Head to Tail): 7 -> 14 -> 20 -> 5 and input_stack (Top of Bottom): 5, 10",
         answer: [
-            "A) "+"input_linked_list (Head to Tail): 7 -> 14 -> 20 -> 5 and input_stack (Top of Bottom): 5, 10",
-            "B) "+"input_linked_list (Head to Tail): 5 -> 7 -> 10 -> 5 and input_stack (Top of Bottom): 2, 5, 10",
-            "C) "+"input_linked_list (Head to Tail): 7 -> 14 -> 20 -> 3 and input_stack (Top of Bottom): 5, 10",
-            "D) "+"input_linked_list (Head to Tail): 7 -> 14 -> 20 -> 5 and input_stack (Top of Bottom): 10"
+            "A) "+"1 2 3 4 5 6",
+            "B) "+"2 3 4 5 6 1",
+            "C) "+"1 1 2 3 4 5",
+            "D) "+"2 3 4 5 6 6"
         ]
     },
     {
         numberQuestion: 8,
-        question: `Which of the following statements can replace Line1 and Line2 in the below Python code to get output as ‘kcjh’?`,
-        code:`def func1(st1):
-        stack1=Stack(len(st1))
-        result=""
-        for ch in st1:
-            if(ch!="a" and ch!="e" and ch!="i" and ch!="o" and ch!="u"):
-                #Line1
-            if(ch == "#"):
-                    #line2
-        while(not stack1.is_empty()): 
-              result+=stack1.pop( )
-         print ( result )
-str="hi##jack"
-func1 ( str )`,
+        question: `What will be the output of the following code snippet?`,
+        code:`fruit_list1 = ['Apple', 'Berry', 'Cherry', 'Papaya']
+fruit_list2 = fruit_list1
+fruit_list3 = fruit_list1[:]
+
+fruit_list2[0] = 'Guava'
+fruit_list3[1] = 'Kiwi'
+
+sum = 0
+for ls in (fruit_list1, fruit_list2, fruit_list3):
+    if ls[0] == 'Guava':
+        sum += 1
+    if ls[1] == 'Kiwi':
+        sum += 20
+
+print (sum)`,
         imgSrc : "q8.png",
-        correctAnswer: "C) "+"Line 1: stack1.push(ch) Line2: stack1.pop()",
+        correctAnswer: "A) "+"22",
         answer: [
-            "A) "+"Line 1: stack1.pop() Line2: stack1.push(ch)",
-            "B) "+"Line 1: stack1.push(ch) Line2: stack1.push(ch)",
-            "C) "+"Line 1: stack1.push(ch) Line2: stack1.pop()",
-            "D) "+"Line 1: stack1.pop() Line2: stack1.pop()"
+            "A) "+"22",
+            "B) "+"21",
+            "C) "+"0",
+            "D) "+"43"
         ]
     },
     {
         numberQuestion: 9,
-        question: `Consider the Hashing methods given in left:`,
-        code:`i)  h(key) = key%10
-
-ii) h(key) = key%25
-        
-iii) h(key) = key%50
-        
-Which of the hashing methods would NOT lead to collision when the following values are to be stored in the hash table?
-        
-80, 20, 35, 45, 25, 90`,
+        question: `What is the output when following code is executed ?`,
+        code:`names1 = ['Amir', 'Bear', 'Charlton', 'Daman']
+names2 = names1
+names3 = names1[:]
+ 
+names2[0] = 'Alice'
+names3[1] = 'Bob'
+ 
+sum = 0
+for ls in (names1, names2, names3):
+    if ls[0] == 'Alice':
+        sum += 1
+    if ls[1] == 'Bob':
+        sum += 10
+ 
+print (sum)`,
         imgSrc : "na.png",
-        correctAnswer: "A) "+"Only iii)",
+        correctAnswer: "B) "+"12",
         answer: [
-            "A) "+"Only iii)",
-            "B) "+"Both ii) and iii)",
-            "C) "+"Both i) and iii)",
-            "D) "+"All i), ii) and iii)"
+            "A) "+"11",
+            "B) "+"12",
+            "C) "+"21",
+            "D) "+"22"
         ]
     },
     {
         numberQuestion: 10,
-        question: `Given the following linked list
-what  is the output of following python function when the head node of the given linked_list are passed as input.
-linked_list: 1->2->3->4->5
-Assumption: Linked List class , with the necessary methods, is available.`,
-        code:`def function(head):
-        if head is None:
-            return
-        if head.get_next().get_next() is not None:
-            print(head.get_data(),end=" ")
-            function(head.get_next())
-        print(head.get_data(),end=" ")`,
+        question: `What is the output when following code is executed ?`,
+        code:`myList = [1, 5, 5, 5, 5, 1]
+max = myList[0]
+indexOfMax = 0
+for i in range(1, len(myList)):
+    if myList[i] > max:
+        max = myList[i]
+        indexOfMax = i
+print(indexOfMax)`,
         imgSrc : "na.png",
-        correctAnswer: "B) "+"1 2 3 4 3 2 1",
+        correctAnswer: "B) "+"1",
         answer: [
-            "A) "+"1 2 3 4 3 2",
-            "B) "+"1 2 3 4 3 2 1",
-            "C) "+"1 2 3 4",
-            "D) "+"1 2 3 4 4 3 2"
+            "A) "+"1",
+            "B) "+"2",
+            "C) "+"3",
+            "D) "+"4"
         ]
     }
 ]
