@@ -314,14 +314,20 @@ print(m)`,
     {
         numberQuestion: 4,
         question: `What will be the output of the following Python code snippet?`,
-        code:`print('ab\ncd\nef'.splitlines())`,
+        code:`matrix = [[1, 2, 3, 4],
+       [4, 5, 6, 7],
+       [8, 9, 10, 11],
+       [12, 13, 14, 15]]
+ 
+for i in range(0, 4):
+    print(matrix[i][1], end = " ")`,
         imgSrc : "q4.png",
-        correctAnswer: "A) "+"[‘ab’, ‘cd’, ‘ef’]",
+        correctAnswer: "D) "+"2 5 9 13",
         answer: [
-            "A) "+"[‘ab’, ‘cd’, ‘ef’]",
-            "B) "+"[‘ab\n’, ‘cd\n’, ‘ef\n’]",
-            "C) "+"[‘ab\n’, ‘cd\n’, ‘ef’]",
-            "D) "+"[‘ab’, ‘cd’, ‘ef\n’]"
+            "A) "+"1 2 3 4",
+            "B) "+"4 5 6 7",
+            "C) "+"1 3 8 12",
+            "D) "+"2 5 9 13"
         ]
     },
     {
