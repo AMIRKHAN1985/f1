@@ -469,5 +469,5 @@ section .answerList .answer:hover {
 }
 .result1{
    height: 100vh;
-   width: 100%;
+   width: 100vw;
 }
