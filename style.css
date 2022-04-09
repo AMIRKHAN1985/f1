@@ -215,7 +215,7 @@ li {
 .quizBox .codeanswer {
     display: flex;
     height:75vh;
-    border: 4px solid black;
+    border: 2px solid black;
        
 }
 
@@ -224,7 +224,7 @@ li {
 /* Quiz Box Section Styling */
 .quizBox section {
     padding: 25px 30px;
-    border: 4px solid black;
+    border: 2px solid black;
     width: 50%;
     
    
@@ -246,7 +246,7 @@ li {
     display: flex;
     padding: 20px 0px;
     overflow-y: scroll;
-    border: 4px solid black;
+    border: 2px solid black;
     width: 50%;
     
 }
@@ -255,12 +255,14 @@ li {
 .quizBox section .answerList {
     display: block;
     padding: 20px 0px;
+    overflow-y: scroll;
 }
 
-/* .quizBox section .answerList .option {
+.quizBox section .answerList .option1 {
     display: flex;
+    overflow-y: scroll;
    
-} */
+}
 
 .quizBox section .answerList .answer {
     align-items: center;
@@ -303,12 +305,12 @@ section .answerList .answer:hover {
 .scoreResults {
     align-items: center;
     background: whitesmoke;
-    border-radius: 5px;
+    border-radius: 0px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     padding: 40px;
-    width: 60%;
+    width: 100%;
     opacity: 0;
     pointer-events: none;
     overflow-x: scroll;
@@ -389,12 +391,13 @@ section .answerList .answer:hover {
     .quizBox.activeQuizBox,
     .scoreResults.activeResults,
     .highscore.activeHighScore {
-        width: 90%;   
+        width: 100%;   
     }
     .quizBox header {
-        flex-direction: column;
-        height: 120px !important;
+        flex-direction: row;
+        height: 10vh !important;
         justify-content: space-around;
+        margin-top: 0px;
     }
 
     .quizBox header.quizBoxTitle,
@@ -446,13 +449,13 @@ section .answerList .answer:hover {
     .quizBox .codeanswer {
         display: inline;
         height:75vh;
-        border: 4px solid black;
+       
         width:100%
            
     }
     .quizBox section {
         padding: 25px 30px;
-        border: 4px solid black;
+        
         width: 100%;  
         
     }
@@ -460,7 +463,7 @@ section .answerList .answer:hover {
         display: flex;
         padding: 20px 0px;
         overflow-y: scroll;
-        border: 4px solid black;
+        
         width: 100%;
         
     }
@@ -468,6 +471,14 @@ section .answerList .answer:hover {
     
 }
 .result1{
+   margin:0px 10px;
    height: 100vh;
-   width: 100vw;
+   width: 100%;
+}
+
+
+.quizBox section .answerList .option1 {
+    display: flex;
+    overflow-y: scroll;
+   
 }
