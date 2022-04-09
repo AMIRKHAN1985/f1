@@ -8,7 +8,7 @@
 }
 
 body {
-    background: #d2d2d2;
+    background: #f7f7f7 
 }
 
 li {
@@ -53,7 +53,7 @@ li {
 
 /* Display Box Styling */
 .displayBox {
-    background: whitesmoke;
+    background: #f7f7f7;
     border-radius: 5px;
     color: black;
     opacity: 0;
@@ -160,7 +160,7 @@ li {
 
 /* Quiz Box Styling */
 .quizBox {
-    background: white;
+    background: #f7f7f7;
     border-radius: 5px;
     color: black;
     opacity: 0;
@@ -174,7 +174,6 @@ li {
 .quizBox header {
     align-items: center;
     border-radius: 5px 5px 0 0;
-    box-shadow: 0px 3px 5px 1px black;
     display: flex;
     height: 10vh;
     justify-content: space-between;
@@ -192,7 +191,7 @@ li {
     background:orangered;
     border: 1px solid #5d5b5b;
     border-radius: 5px;
-    color: white;
+    color: #f7f7f7 ;
     font-weight: 500;
     padding: 10px;
     user-select: none;
@@ -245,11 +244,12 @@ li {
 /* Quiz Box Section Question Styling */
 .quizBox .codeanswer .qImg {
     display: flex;
-    margin:10px;
-    padding:10px;
+    padding: 20px 0px;
     overflow-y: scroll;
     border: 2px solid black;
     width: 50%;
+  
+    padding:10px;
     
 }
 
@@ -268,7 +268,7 @@ li {
 
 .quizBox section .answerList .answer {
     align-items: center;
-    background:white;
+    background:#f7f7f7 ;
     border: 1px solid #797777;
     border-radius: 5px;
     cursor: pointer;
@@ -282,7 +282,7 @@ li {
 
 section .answerList .answer:hover {
     background: rgb(5, 5, 216,0.7);
-    color: white;
+    color: #f7f7f7 ;
 }
 
 /* Quiz Box Footer Styling */
@@ -298,7 +298,7 @@ section .answerList .answer:hover {
 .quizBox footer .questionProgressBar {
     background:orangered;
     border-radius: 5px;
-    color: white;
+    color: #f7f7f7 ;
     padding: 10px;
     user-select: none;
 }
@@ -306,15 +306,16 @@ section .answerList .answer:hover {
 /* Score Results Styling */
 .scoreResults {
     align-items: center;
-    background: whitesmoke;
+    background: #f7f7f7 ;
     border-radius: 0px;
-    display: flex;
+    display: block;
     flex-direction: column;
     justify-content: space-between;
     padding: 20px;
     width: 100vw;
+    height: 100vh;
     margin-top: 20px;
-    
+   
     opacity: 0;
     pointer-events: none;
     overflow-x: scroll;
@@ -364,7 +365,7 @@ section .answerList .answer:hover {
 }
 
 .highscore {
-    background: white;
+    background: #f7f7f7 ;
     border-radius: 5px;
     color: black;
     width: 55%;
@@ -469,11 +470,11 @@ section .answerList .answer:hover {
     }
     .quizBox .codeanswer .qImg {
         display: flex;
-        margin:10px;
-    padding:10px;
         overflow-y: scroll;
         
         width: 100%;
+      
+    padding:10px;
         
     }
     
