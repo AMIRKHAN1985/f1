@@ -245,7 +245,8 @@ li {
 /* Quiz Box Section Question Styling */
 .quizBox .codeanswer .qImg {
     display: flex;
-    padding: 20px 0px;
+    margin:10px;
+    padding:10px;
     overflow-y: scroll;
     border: 2px solid black;
     width: 50%;
@@ -468,7 +469,8 @@ section .answerList .answer:hover {
     }
     .quizBox .codeanswer .qImg {
         display: flex;
-        padding: 20px 0px;
+        margin:10px;
+    padding:10px;
         overflow-y: scroll;
         
         width: 100%;
